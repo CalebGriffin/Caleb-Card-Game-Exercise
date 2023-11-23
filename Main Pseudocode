@@ -1,0 +1,76 @@
+string userInput
+string[] splitUserInput
+int score
+
+string-input:
+    reset
+
+    userInput = get string from user input and make it uppercase
+
+    if verify-input-format fails:
+        display incorrect format error message
+    
+    for each element in splitUserInput:
+        if verify-valid-card fails:
+            display invalid card error message
+    
+    calculate-score
+
+    display the score to the user
+
+verify-input-format:
+    if the string is empty:
+        return false
+    
+    if the string contains any non-alphanumeric characters that aren't commas:
+        return false
+    
+    splitUserInput = split the string into an array of strings by comma
+
+    if the split failed:
+        return false
+
+    if any of the values in the array are longer or shorter than 2 characters:
+        return false
+
+verify-valid-card:
+    if the string is longer or shorter than 2 characters:
+        return false
+
+    if the first character of the value is not 2-9 or T, J, Q, K, A:
+        return false
+    if the second character of the value is not C, D, H, S:
+        return false
+    return true
+
+check-for-duplicates:
+    find duplicates in splitUserInput and the number of times they appear in the array
+
+    for each duplicate:
+        if its the joker:
+            if there are more than 2:
+                return true
+            else:
+                continue
+        else
+            return true
+    
+    return false
+
+calculate-score:
+    int noOfJokers
+
+    for each element in splitUserInput:
+        if its a joker:
+            increase the noOfJokers by 1
+        else:
+            calculate the point value of the card (2-9 or T, J, Q, K or A)
+            multiply the point value by the suit multiplier
+            score += the result of the value * multiplier
+
+    multiply the score by double the number of jokers
+
+reset:
+    userInput = ""
+    splitUserInput = []
+    score = 0

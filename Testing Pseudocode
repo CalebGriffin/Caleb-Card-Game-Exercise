@@ -1,0 +1,45 @@
+key: input -> expected output
+
+test cases for string-input:
+    "2C" -> 2
+    "TC" -> 10
+    "JD" -> 22
+    "QH" -> 36
+    "KS" -> 52
+    "AC" -> 14
+    "3C,4C" -> 7
+    "TC,TD,TH,TS" -> 100
+    "JK" -> 0
+    "JK,JK" -> 0
+    "2C,JK" -> 4
+    "JK,2C,JK" -> 8
+    "2C,2D,JK" -> 12
+    "2H,2S,JK,JK" -> 56
+
+test cases for verify-input-format:
+    "" -> false
+    "asdf" -> false
+    "as,df" -> true
+    "asd,f" -> false
+    "as,d" -> false
+    "as,df,gh" -> true
+    "as,df,gh,jk,l;" -> false
+
+test cases for verify-valid-card:
+    "AS" -> true
+    "1S" -> false
+    "2B" -> false
+    "11S" -> false
+    "A" -> false
+
+test cases for check-for-duplicates:
+    "2C" -> false
+    "2C,2C" -> true
+    "2C,2D" -> false
+    "2C,2D,2C" -> true
+    "JK,JK" -> false
+    "JK,2C,JK" -> false
+    "JK,2C,JK,2D,JK" -> true
+
+test cases for calculate-score:
+    (same as string-input)
