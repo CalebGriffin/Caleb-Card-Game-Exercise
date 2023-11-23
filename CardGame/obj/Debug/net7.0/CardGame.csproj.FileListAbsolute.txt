@@ -1,0 +1,14 @@
+/Users/calebgriffin/Documents/GitHub/Caleb-Card-Game-Exercise/CardGame/bin/Debug/net7.0/CardGame
+/Users/calebgriffin/Documents/GitHub/Caleb-Card-Game-Exercise/CardGame/bin/Debug/net7.0/CardGame.deps.json
+/Users/calebgriffin/Documents/GitHub/Caleb-Card-Game-Exercise/CardGame/bin/Debug/net7.0/CardGame.runtimeconfig.json
+/Users/calebgriffin/Documents/GitHub/Caleb-Card-Game-Exercise/CardGame/bin/Debug/net7.0/CardGame.dll
+/Users/calebgriffin/Documents/GitHub/Caleb-Card-Game-Exercise/CardGame/bin/Debug/net7.0/CardGame.pdb
+/Users/calebgriffin/Documents/GitHub/Caleb-Card-Game-Exercise/CardGame/obj/Debug/net7.0/CardGame.GeneratedMSBuildEditorConfig.editorconfig
+/Users/calebgriffin/Documents/GitHub/Caleb-Card-Game-Exercise/CardGame/obj/Debug/net7.0/CardGame.AssemblyInfoInputs.cache
+/Users/calebgriffin/Documents/GitHub/Caleb-Card-Game-Exercise/CardGame/obj/Debug/net7.0/CardGame.AssemblyInfo.cs
+/Users/calebgriffin/Documents/GitHub/Caleb-Card-Game-Exercise/CardGame/obj/Debug/net7.0/CardGame.csproj.CoreCompileInputs.cache
+/Users/calebgriffin/Documents/GitHub/Caleb-Card-Game-Exercise/CardGame/obj/Debug/net7.0/CardGame.dll
+/Users/calebgriffin/Documents/GitHub/Caleb-Card-Game-Exercise/CardGame/obj/Debug/net7.0/refint/CardGame.dll
+/Users/calebgriffin/Documents/GitHub/Caleb-Card-Game-Exercise/CardGame/obj/Debug/net7.0/CardGame.pdb
+/Users/calebgriffin/Documents/GitHub/Caleb-Card-Game-Exercise/CardGame/obj/Debug/net7.0/CardGame.genruntimeconfig.cache
+/Users/calebgriffin/Documents/GitHub/Caleb-Card-Game-Exercise/CardGame/obj/Debug/net7.0/ref/CardGame.dll
