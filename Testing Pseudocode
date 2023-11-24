@@ -19,11 +19,13 @@ test cases for string-input:
 test cases for verify-input-format:
     "" -> false
     "asdf" -> false
-    "as,df" -> true
-    "asd,f" -> false
-    "as,d" -> false
-    "as,df,gh" -> true
-    "as,df,gh,jk,l;" -> false
+    "ASDF" -> false
+    "AS,DF" -> true
+    "as,df" -> false
+    "ASD,F" -> false
+    "AS,D" -> false
+    "AS,DF,GH" -> true
+    "AS,DF,GH,JK,L;" -> false
 
 test cases for verify-valid-card:
     "AS" -> true

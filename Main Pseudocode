@@ -5,7 +5,7 @@ int score
 string-input:
     reset
 
-    userInput = get string from user input and make it uppercase
+    userInput = get string from user input
 
     if verify-input-format fails:
         display incorrect format error message
@@ -14,12 +14,18 @@ string-input:
         if verify-valid-card fails:
             display invalid card error message
     
+    if check-for-duplicates fails:
+        display duplicate card error message
+    
     calculate-score
 
     display the score to the user
 
 verify-input-format:
     if the string is empty:
+        return false
+
+    if the string is not uppercase:
         return false
     
     if the string contains any non-alphanumeric characters that aren't commas:
@@ -32,6 +38,8 @@ verify-input-format:
 
     if any of the values in the array are longer or shorter than 2 characters:
         return false
+    
+    return true
 
 verify-valid-card:
     if the string is longer or shorter than 2 characters:
