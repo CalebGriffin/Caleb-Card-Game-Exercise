@@ -97,6 +97,14 @@ namespace CardGame
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine(ScoreMessage);
             }
+
+            //Console.ForegroundColor = ConsoleColor.White;
+            //Console.WriteLine("Would you like to play again? (Y/N)");
+            //string restartInput = Console.ReadLine() ?? "";
+            //if (restartInput == "Y")
+            //{
+                //Run();
+            //}
         }
 
         /// <summary>
@@ -248,6 +256,46 @@ namespace CardGame
             // If there are any jokers, multiply the score by the number of jokers times 2
             if (_noOfJokers > 0)
                 _score *= _noOfJokers * 2;
+            
+            _score += 400 * NoOfFourOfAKind();
+        }
+        
+        public int NoOfFourOfAKind()
+        {
+            int noOfFourOfAKind = 0;
+
+            Dictionary<string, int> noOfEachCard = new Dictionary<string, int>();
+
+            foreach (string s in SplitUserInput)
+            {
+                if (s == "JK")
+                {
+                    continue;
+                }
+                else
+                {
+                    // If the card is in the dictionary, increase the count
+                    // Else, add it to the dictionary
+                    if (noOfEachCard.ContainsKey(s[0].ToString()))
+                    {
+                        noOfEachCard[s[0].ToString()]++;
+                    }
+                    else
+                    {
+                        noOfEachCard.Add(s[0].ToString(), 1);
+                    }
+                }
+            }
+
+            foreach (int noOfCards in noOfEachCard.Values)
+            {
+                if (noOfCards > 3)
+                {
+                    noOfFourOfAKind++;
+                }
+            }
+
+            return noOfFourOfAKind;
         }
 
         /// <summary>

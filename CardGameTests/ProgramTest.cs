@@ -28,10 +28,12 @@ public class ProgramTest
     [TestMethod]
     [DataRow("AC", "Your score is: 14")]
     [DataRow("3C,4C", "Your score is: 7")]
-    [DataRow("TC,TD,TH,TS", "Your score is: 100")]
+    [DataRow("TC,TD,TH,TS", "Your score is: 500")]
     [DataRow("JK", "Your score is: 0")]
     [DataRow("2C,2D,JK", "Your score is: 12")]
     [DataRow("2H,2S,JK,JK", "Your score is: 56")]
+    [DataRow("TC,TD,TH,TS", "Your score is: 500")]
+    [DataRow("TC,TD,TH,TS,2C,2D,2H,2S", "Your score is: 920")]
     [DynamicData(nameof(TestRunData))]
     public void TestRun(string input, string expected)
     {
@@ -117,13 +119,15 @@ public class ProgramTest
     [DataRow("KS", 52)]
     [DataRow("AC", 14)]
     [DataRow("3C,4C", 7)]
-    [DataRow("TC,TD,TH,TS", 100)]
+    [DataRow("TC,TD,TH,TS", 500)]
     [DataRow("JK", 0)]
     [DataRow("JK,JK", 0)]
     [DataRow("2C,JK", 4)]
     [DataRow("JK,2C,JK", 8)]
     [DataRow("2C,2D,JK", 12)]
     [DataRow("2H,2S,JK,JK", 56)]
+    [DataRow("TC,TD,TH,TS", 500)]
+    [DataRow("TC,TD,TH,TS,2C,2D,2H,2S", 920)]
     public void TestCalculateScore(string input, int expected)
     {
         // Arrange
